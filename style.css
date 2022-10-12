@@ -1,45 +1,55 @@
 @import url(https://fonts.google.com/specimen/Overpass);
 
+:root {
+  --white: white;
+  --orange: hsl(25, 97%, 53%);
+  --light-grey: rgb(125, 130, 140);
+  --dark-grey: rgb(39, 46, 56);
+}
+
 
 body {
     background-color: hsl(216, 12%, 8%);
     font-family: 'Overpass', sans-serif;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90rem;
+    margin-bottom: 17%;
     position: fixed;
-    right: 0px;
-    bottom: 0px;
-    top: 0px;
-    left: 0px;
+    right: 0rem;
+    bottom: 0rem;
+    top: 0rem;
+    left: 0rem;
 }
 
 #global-content {
     background-color: hsl(213, 27%, 13%);
-    color: white;
+    color: var(--white);
     position: absolute;
     top: auto;
     bottom: auto;
     left: 35%;
     right: 35%;
-    border-radius: 20px;
-    padding: 30px;
+    border-radius: 1.25rem;
+    padding: 1.875rem;
 }
 
 h1 {
-    font-size: 2.25vw;
+    font-size: 2.025rem;
 }
 
 #div-icon {
-    background-color: rgb(39, 46, 56);
-    width: 20px;
+    background-color: var(--dark-grey);
+    width: 1.25rem;
     border-radius: 100%;
-    padding: 12px;
+    padding: 0.75rem;
     display: flex;
     justify-content: center;
 }
 
 .grey-paragraph {
-    color: rgb(125, 130, 140);
-    font-size: 15px;
+    color: var(--light-grey);
+    font-size: 0.9375rem;
 }
 
 button {
@@ -47,17 +57,17 @@ button {
 }
 
 #div-btn-number {
-    margin: 30px 0px 30px 0px;
+    margin: 1.875rem 0rem 1.875rem 0rem;
     display: flex;
     justify-content: space-between;
 }
 
 .btn-label {
-    background-color: rgb(39, 46, 56);
-    color: rgb(104, 111, 121);
-    font-size: 15px;
-    width: 50px;
-    height: 50px;
+    background-color: var(--dark-grey);
+    color: var(--light-grey);
+    font-size: 0.9375rem;
+    width: 3.125rem;
+    height: 3.125rem;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -65,13 +75,13 @@ button {
 }
 
 .btn-label:hover {
-    background-color: hsl(25, 97%, 53%);
-    color: white;
+    background-color: var(--orange);
+    color: var(--white);
 }
 
 .btn-number:checked + .btn-label {
-    background-color: hsl(25, 97%, 53%);
-    color: white;
+    background-color: var(--orange);
+    color: var(--white);
 }
 
 .btn-number {
@@ -79,27 +89,27 @@ button {
 }
 
 .div-btn-submit {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     width: 100%;
 }
 
 .btn {
-    background-color: hsl(25, 97%, 53%);
-    color: white;
+    background-color: var(--orange);
+    color: var(--white);
     width: 100%;
-    padding: 15px;
-    border-radius: 30px;
-    font-size: 17px;
+    padding: 0.9375rem;
+    border-radius: 1.875rem;
+    font-size: 1.0625rem;
     text-align: center;
 }
 
 .btn:hover {
-    background-color: white;
-    color: hsl(25, 97%, 53%);
+    background-color: var(--white);
+    color: var(--orange);
 }
 
 .thankyou-active {
-    padding: 5px 15px 5px 15px;
+    padding: 0.3125rem 0.9375rem 0.3125rem 0.9375rem;
     text-align: center
 }
 
@@ -114,34 +124,28 @@ button {
 }
 
 
-@media screen and (max-width: 830px) {
-    body {
-        background-color: hsl(216, 12%, 8%);
-        font-family: 'Overpass', sans-serif;
-        margin: auto;
-    }
-    
+@media screen and (max-width: 830px) {  
     #global-content {
-        background-color: hsl(213, 27%, 13%);
-        color: white;
-        position: absolute;
-        left: 25%;
+        left: 3%;
         right: 25%;
-        border-radius: 20px;
+        border-radius: 5vw;
         margin-top: 40vw;
         padding: 4vw;
-        width: 50vw;
-        height: 50vw;
+        width: 70vw;
+        height: 90vw;
+    }
+
+    #card1 .h1 {
+      margin: 7vw 0vw 5vw 0vw;
     }
 
     h1 {
-        font-size: 3vw;
+        font-size: 5vw;
         margin-bottom: 4vw;
         margin-top: 4vw;
     } 
     
     #div-icon {
-        background-color: rgb(39, 46, 56);
         border-radius: 100%;
         padding: 2vw;
         display: flex;
@@ -149,44 +153,24 @@ button {
     }
     
     .grey-paragraph {
-        color: rgb(125, 130, 140);
-        font-size: 2.5vw;
+        font-size: 4vw;
+        margin: 1vw;
     }
-    
-    button {
-        border: none;
-    }
-    
+  
     #div-btn-number {
-        margin: 5vw 0vw 5vw 0vw;
+        margin: 7vw 0vw 7vw 0vw;
         display: flex;
         justify-content: space-between;
     }
     
     .btn-label {
-        background-color: rgb(39, 46, 56);
-        color: rgb(104, 111, 121);
         font-size: 3vw;
-        width: 7vw;
-        height: 7vw;
+        width: 10vw;
+        height: 10vw;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-    
-    .btn-label:hover {
-        background-color: hsl(25, 97%, 53%);
-        color: white;
-    }
-    
-    .btn-number:checked + .btn-label {
-        background-color: hsl(25, 97%, 53%);
-        color: white;
-    }
-    
-    .btn-number {
-        display: none;
     }
     
     .div-btn-submit {
@@ -195,32 +179,13 @@ button {
     }
     
     .btn {
-        background-color: hsl(25, 97%, 53%);
-        color: white;
         width: 100%;
         padding: 2vw;
         border-radius: 2.5vw;
-        font-size: 2vw;
-        text-align: center;
-    }
-    
-    .btn:hover {
-        background-color: white;
-        color: hsl(25, 97%, 53%);
+        font-size: 3vw;
     }
     
     .thankyou-active {
         padding: 0.347vw 1.041vw 0.347vw 1.041vw;
-        text-align: center
-    }
-    
-    .hidden {
-        display: none;
-    }
-    
-    #card2 {
-        text-align: center;
-        justify-content: center;
-        justify-items: center;
     }
 }
